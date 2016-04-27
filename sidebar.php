@@ -1,13 +1,3 @@
-
-<div class="list-group">
-    <a href="#" class="list-group-item active">Link</a>
-    <a href="#" class="list-group-item">Link</a>
-    <a href="#" class="list-group-item">Link</a>
-    <a href="#" class="list-group-item">Link</a>
-    <a href="#" class="list-group-item">Link</a>
-    <a href="#" class="list-group-item">Link</a>
-    <a href="#" class="list-group-item">Link</a>
-    <a href="#" class="list-group-item">Link</a>
-    <a href="#" class="list-group-item">Link</a>
-    <a href="#" class="list-group-item">Link</a>
-</div>
+<?php if ( is_active_sidebar( 'family_right' ) ) : ?>
+        <?php dynamic_sidebar( 'family_right' ); ?>
+<?php endif; ?>

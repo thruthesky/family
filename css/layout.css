@@ -1,3 +1,43 @@
 body {
     min-height: 2048px;
 }
+
+@media all and ( min-width: 40em ) {
+    .xs {
+        display: none!important;
+    }
+    body {
+        margin-top: 70px!important; /* overriding bootstrap */
+    }
+    .md {
+        display: block;
+    }
+    header {
+        position: fixed;
+        z-index: 12345;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #ebebeb;
+    }
+}
+
+@media all and ( min-width: 900px ) {
+    .layout-content-inner {
+        position: relative;
+        overflow: auto;
+    }
+    .content-left {
+        padding-right: 320px;
+        overflow: hidden;
+    }
+    .content-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 300px;
+        overflow: auto;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+}

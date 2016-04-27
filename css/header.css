@@ -1,3 +1,6 @@
+.header-inner {
+}
+
 .xs.menu {
     padding: .6em;
     background-color: #c6a53b;
@@ -33,14 +36,11 @@
 .md {
     display: none;
 }
-@media all and ( min-width: 40em ) {
-    .xs {
-        display: none!important;
-    }
-    body {
-        margin-top: 70px!important; /* overriding bootstrap */
-    }
-    .md {
-        display: block;
-    }
+
+.md.menu {
+    margin: 0 auto;
+    padding: 1em;
+    max-width: 1248px;
 }
+
+

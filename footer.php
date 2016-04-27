@@ -3,11 +3,11 @@
 
 </div><!-- .content-left -->
 
-<div class="col-xs-12 col-sm-3 content-right">
+<div class="content-right">
     <?php require 'sidebar.php'; ?>
 </div><!-- .content-right -->
-</div><!--.container.content > .row.content-left-right -->
-</div><!--.container.content-->
+</div><!-- /.layout-content-inner-->
+</section><!-- .layout-content -->
 
 <footer>
     <div class="copyright">
