@@ -1,0 +1,46 @@
+.xs.menu {
+    padding: .6em;
+    background-color: #c6a53b;
+    font-size: 1.2em;
+}
+
+.xs.menu > span {
+    display: inline-block;
+}
+.xs.menu .icon.left {
+    font-size: 1.8em;
+}
+.xs.menu .icon.right {
+    float: right;
+    margin-right: .6em;
+    font-size: 2em;
+}
+
+.xs.menu .project-name {
+    padding: .2em 0 0 .8em;
+}
+
+.xs.sub-menu {
+    display: none;
+}
+.xs.sub-menu a {
+    display: block;
+    padding: .6em 0 .6em 1em;
+    background-color: #0A246A;
+}
+
+
+.md {
+    display: none;
+}
+@media all and ( min-width: 40em ) {
+    .xs {
+        display: none!important;
+    }
+    body {
+        margin-top: 70px!important; /* overriding bootstrap */
+    }
+    .md {
+        display: block;
+    }
+}
