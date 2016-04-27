@@ -1,6 +1,4 @@
 <?php
-$project_name = "Project Name";
-
 
 
 ?><!DOCTYPE HTML>
@@ -20,17 +18,28 @@ $project_name = "Project Name";
     <div class="header-inner">
         <nav class="xs menu">
             <span class="icon left dashicons dashicons-admin-home"></span>
-            <span class="project-name"><?php echo $project_name?></span>
+            <span class="project-name"><?php include 'part/site-title.php'?></span>
             <span class="icon right dashicons dashicons-menu"></span>
         </nav>
         <nav class="xs sub-menu">
             <?php echo get_header_sub_menu()?>
         </nav>
 
-        <nav class="md menu">
-            <span class="project-name"><?php echo $project_name?></span>
+        <nav class="md menu fixed">
+            <span class="project-name"><?php include 'part/site-title.php'?></span>
             <?php echo get_header_sub_menu()?>
         </nav>
+        <div class="md movable-header">
+            <div class="md title-image">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri()?>/tmp/title-image.png"></a>
+            </div>
+            <nav class="md menu">
+                <span class="project-name"><?php include 'part/site-title.php'?></span>
+                <?php echo get_header_sub_menu()?>
+            </nav>
+        </div>
+
+
     </div>
 </header>
 <section class="layout-content">

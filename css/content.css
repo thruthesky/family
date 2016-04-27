@@ -1,7 +1,17 @@
 .layout-content {
-    max-width: 1248px;
-    margin: 0 auto;
+    background-color: #e3e3e3;
 }
 .layout-content-inner {
-    margin: 1em;
+    padding: 1em .8em;
+    min-height: 1024px;
+    background-color: #f0f0f0;
+}
+
+
+.first-page-post-title {
+    font-size: 1.2em;
+}
+
+.first-page-post img {
+    width: 100%;
 }

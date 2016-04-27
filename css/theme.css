@@ -9,17 +9,6 @@ ol, ul {
 /* ------------------------------------------------------------------------- */
 /* Placeholder */
 
-.hu-placeholder-widget {
-    background: white;
-    padding: 7%;
-    text-align: center;
-    border: 3px dotted #1abc9c;
-    font-size: 14px;
-}
-.hu-placeholder-widget .zone-name {
-    font-size: 19px;
-}
-
 
 .widget { color: #777; font-size: 15px; overflow: hidden; }
 .widget a { color: #777; }
@@ -132,8 +121,8 @@ ol, ul {
 .widget_calendar a { font-weight: 600; }
 .widget_calendar a:hover { color: #444!important; }
 .widget_calendar #wp-calendar { width: 100%; }
-.widget_calendar caption { color: #fff; padding: 5px 10px; }
-.widget_calendar caption:before { color: #fff; color: rgba(255,255,255,0.7); font-size: 15px; }
+.widget_calendar caption { color: #8e8e8e; padding: 5px 10px; }
+.widget_calendar caption:before { font-size: 15px; }
 .widget_calendar thead { background: #e2e2e2; -webkit-box-shadow: 0 1px 0 #ddd; box-shadow: inset 0 -1px 0 #ddd; }
 #footer .widget_calendar thead { background: #f2f2f2; }
 .widget_calendar th { font-weight: 600; }

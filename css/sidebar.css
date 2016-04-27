@@ -1,0 +1,8 @@
+.sidebar {
+
+}
+.sidebar .widget {
+    padding: 1em 1em 0 0!important;
+}
+.sidebar > .sidebar-inner {
+}

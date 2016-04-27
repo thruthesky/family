@@ -1,0 +1,16 @@
+footer {
+    background-color: #ecf0f1;
+}
+.copyright {
+    padding: 3em;
+}
+
+@media all and ( min-width: 34em ) {
+
+    .copyright-logo {
+        padding-right: 2em;
+        border-right: 2px solid #e1e1e1;
+        text-align: right;
+    }
+
+}
