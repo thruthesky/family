@@ -25,21 +25,21 @@
             <?php echo get_header_sub_menu()?>
         </nav>
 
-        <nav class="md menu fixed">
-            <span class="project-name"><?php include 'part/site-title.php'?></span>
-            <?php echo get_header_sub_menu()?>
-        </nav>
-        <div class="md movable-header">
-            <div class="md title-image">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri()?>/tmp/title-image.png"></a>
-            </div>
-            <nav class="md menu">
+        <div class="md">
+            <nav class="md-menu md-menu-fixed">
                 <span class="project-name"><?php include 'part/site-title.php'?></span>
                 <?php echo get_header_sub_menu()?>
             </nav>
+            <div class="md-movable-header">
+                <div class="md-title-image">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri()?>/tmp/title-image.png"></a>
+                </div>
+                <nav class="md-menu">
+                    <span class="project-name"><?php include 'part/site-title.php'?></span>
+                    <?php echo get_header_sub_menu()?>
+                </nav>
+            </div>
         </div>
-
-
     </div>
 </header>
 <section class="layout-content">

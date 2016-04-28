@@ -52,40 +52,36 @@
  * ----------------------------------------- */
 .md {
     display: none;
+    margin: 0 auto;
+    max-width: 1248px;
 }
 
 
-.md.menu {
-    top: 0;
-    left: 0;
-    right: 0;
+.md-menu {
+    background-color: #525252;
+    padding: 1em;
 }
 
-.md.menu.fixed {
+.md-menu-fixed {
     display: none;
     position: fixed;
+    width: 1248px;
     z-index: 950;
 }
-.md.movable-header {
+.md-movable-header {
     position: relative;
     z-index: 1000;
 }
 
-.md.title-image {
+.md-title-image {
 
 }
-.md.title-image img {
+.md-title-image img {
     width: 100%;
 }
 
-.md.menu {
-    margin: 0 auto;
-    padding: 1em;
-    max-width: 1248px;
-    background-color: #525252;
-}
 
-.md.menu a {
+.md-menu a {
     display: inline-block;
     padding: .2em .6em;
     color: white;
@@ -93,7 +89,7 @@
 }
 
 @media all and ( min-width: 640px ) {
-    .md.menu.fixed {
+    .md-menu-fixed {
         display: block;
     }
 }
