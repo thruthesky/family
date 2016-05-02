@@ -25,6 +25,10 @@
     width: 100%;
 }
 
+.first-page-post-desc {
+    height: 8em;
+    overflow: hidden;
+}
 .first-page-post-desc a {
     font-size: 1em;
     color: #071634;
