@@ -25,7 +25,7 @@
                 <a href="<?php echo get_permalink($recent["ID"])?>">
                     <img src='<?php echo $src?>'>
                 </a>
-                <?
+                <?php
             }
             ?>
             <div>
