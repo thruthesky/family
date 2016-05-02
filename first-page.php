@@ -1,3 +1,6 @@
+<?php
+wp_enqueue_style("first-page", get_template_directory_uri() . '/css/first-page.css');
+?>
 <div class="row">
     <?php
     $args = array(
@@ -22,14 +25,14 @@
             $src = forum()->get_first_image($recent['ID']);
             if ( $src ) {
                 ?>
-                <a href="<?php echo get_permalink($recent["ID"])?>">
+                <a class="photo" href="<?php echo get_permalink($recent["ID"])?>">
                     <img src='<?php echo $src?>'>
                 </a>
                 <?php
             }
             ?>
-            <div>
-                <?php echo mb_strcut(strip_tags($recent['post_content']), 0, 3 * 88);?>
+            <div class="first-page-post-desc">
+                <a href="<?php echo get_permalink($recent["ID"])?>"><?php echo mb_strcut(strip_tags($recent['post_content']), 0, 3 * 88);?></a>
             </div>
         </div>
         <?php
