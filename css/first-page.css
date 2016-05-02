@@ -1,0 +1,31 @@
+.first-page-post {
+    margin-bottom: 1em;
+}
+
+.first-page-post a:hover {
+    text-decoration: none;
+}
+.first-page-post-title {
+    font-size: 1.2em;
+    height: 2.3em;
+    overflow: hidden;
+}
+.first-page-post-title a {
+    color: #071634;
+}
+
+.first-page-post .photo {
+    display: block;
+    margin-bottom: 1em;
+    height: 8em;
+    overflow: hidden;
+}
+.first-page-post img {
+    display:block;
+    width: 100%;
+}
+
+.first-page-post-desc a {
+    font-size: 1em;
+    color: #071634;
+}
