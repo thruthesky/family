@@ -35,7 +35,9 @@
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri()?>/tmp/title-image.png"></a>
                 </div>
                 <nav class="md-menu">
+                    <?php /*
                     <span class="project-name"><?php include 'part/site-title.php'?></span>
+ */ ?>
                     <?php echo get_header_sub_menu()?>
                 </nav>
             </div>

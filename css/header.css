@@ -80,12 +80,15 @@
     width: 100%;
 }
 
-
 .md-menu a {
     display: inline-block;
     padding: .2em .6em;
     color: white;
     font-size: 1.2rem;
+}
+.md-menu a:hover {
+    color: white;
+    text-decoration: none;
 }
 
 @media all and ( min-width: 640px ) {
