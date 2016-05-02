@@ -3,7 +3,9 @@
 }
 .layout-content-inner {
     padding: 1em .8em;
-    min-height: 1024px;
     background-color: #f0f0f0;
+}
+.content-left {
+    min-height: 1400px;
 }
 

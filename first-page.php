@@ -28,7 +28,7 @@ wp_enqueue_style("first-page", get_template_directory_uri() . '/css/first-page.c
                 <a class="photo" href="<?php echo get_permalink($recent["ID"])?>">
                     <img src='<?php echo $src?>'>
                 </a>
-                <?
+                <?php
             }
             ?>
             <div class="first-page-post-desc">

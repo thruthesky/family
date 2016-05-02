@@ -1,6 +1,6 @@
 
 
-
+</div><!-- .content-left-inner -->
 </div><!-- .content-left -->
 
 <div class="sidebar content-right">

@@ -1,5 +1,6 @@
 .sidebar {
-
+	overflow: auto;
+	overflow-y: none;
 }
 .sidebar .widget {
     padding: 1em 1em 0 0!important;
