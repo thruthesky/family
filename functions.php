@@ -27,6 +27,13 @@ function register_my_menu() {
 }
 add_action( 'init', 'register_my_menu' );
 
+add_action( 'template_redirect', function() {
+    if ( ! defined('K_FORUM') ) {
+        echo "Enable k-forum";
+        exit;
+    }
+});
+
 
 class Walker_Family_Header_Menu extends Walker_Nav_Menu {
     function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
