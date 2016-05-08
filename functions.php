@@ -1,5 +1,24 @@
 <?php
 
+
+if ( ! function_exists('in') ) {
+    /**
+     *
+     * @note By default it returns null if the key does not exist.
+     *
+     * @param $name
+     * @param null $default
+     * @return null
+     *
+     */
+    function in( $name, $default = null ) {
+        if ( isset( $_POST[$name] ) ) return $_POST[$name];
+        else if ( isset( $_GET[$name] ) ) return $_GET[$name];
+        else return $default;
+    }
+}
+
+
 add_action( 'wp_enqueue_scripts', function() {
     $td = get_template_directory_uri();
     wp_enqueue_style( 'style',              $td . '/style.css' );
@@ -18,8 +37,7 @@ add_action( 'wp_enqueue_scripts', function() {
 
 
 add_action('after_setup_theme', function () {
-    if ( function_exists('remove_admin_bar') ) remove_admin_bar(true);
-    //load_theme_textdomain('x5', get_template_directory());
+    show_admin_bar(false);
 });
 
 function register_my_menu() {
