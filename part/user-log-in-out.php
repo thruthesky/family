@@ -17,15 +17,22 @@
 ?>
 
 <?php if ( is_user_logged_in() ) : ?>
-    <?php
-    $user = wp_get_current_user();
-    ?>
-    Welcome, <?php echo $user->user_login?>.
-    <a href="<?php echo wp_logout_url($_SERVER['REQUEST_URI'])?>">Logout</a>
+    <section class="login-info">
+        <?php
+        $user = wp_get_current_user();
+        ?>
+        Welcome, <?php echo $user->user_login?>.
+        <a href="<?php echo wp_logout_url($_SERVER['REQUEST_URI'])?>">Logout</a>
+    </section>
 <?php else: ?>
 
     <style>
-        .remember-me .text {
+        .login-form {
+            margin-top: 1em;
+            padding: 1em;
+            background-color: #d8ded7;
+        }
+        .login-form .remember-me .text {
             float:left;
         }
     </style>
@@ -70,7 +77,7 @@
         });
     </script>
 
-    <section class="log-in">
+    <section class="login-form">
         <form action="<?php echo home_url('/forum/submit')?>" method="POST">
             <input type="hidden" name="do" value="login">
             <?php wp_nonce_field('log-in'); ?>
