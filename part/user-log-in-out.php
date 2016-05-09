@@ -17,6 +17,13 @@
 ?>
 
 <?php if ( is_user_logged_in() ) : ?>
+    <style>
+        .login-info {
+            margin-top: 1em;
+            padding: 1em;
+            background-color: #e3e0cf;
+        }
+    </style>
     <section class="login-info">
         <?php
         $user = wp_get_current_user();
@@ -30,57 +37,18 @@
         .login-form {
             margin-top: 1em;
             padding: 1em;
-            background-color: #d8ded7;
+            background-color: #e3e0cf;
         }
         .login-form .remember-me .text {
             float:left;
         }
     </style>
-    <script>
-        jQuery( function( $ ) {
-            var $log_in_form = $('section.log-in form');
-            $log_in_form.submit ( function (e) {
-                e.preventDefault();
-                on_submit();
-                var $form = $(this);
-                var url = $form.prop('action') + '?' + $form.serialize();
-                console.log(url);
-                $.post(url, function(re) {
-                    on_result(re);
-                });
-            });
-            function on_submit() {
-                $log_in_form.find('.line.spinner').show();
-                $log_in_form.find('.line.submit').hide();
-                $log_in_form.find('.line.error').hide();
-            }
-            function on_result(re) {
-                var $error = $('.line.error');
-                setTimeout(function(){
-                    $('.line.spinner').hide();
-                    if ( re['success'] == false ) {
-                        $('.line.submit').show();
-                        $error.html( '<i class="fa fa-exclamation-triangle"></i> ' + re['message'] );
-                        $error.show();
-                    }
-                    else if ( typeof re['success'] == 'undefined' ) {
-                        $('.line.submit').show();
-                        $error.html( '<i class="fa fa-exclamation-triangle"></i> Server Internal Error ...');
-                        $error.show();
-                    }
-                    else {
-                        location.reload();
-                    }
-                }, 500);
-            }
-
-        });
-    </script>
 
     <section class="login-form">
         <form action="<?php echo home_url('/forum/submit')?>" method="POST">
-            <input type="hidden" name="do" value="login">
             <?php wp_nonce_field('log-in'); ?>
+            <input type="hidden" name="do" value="login">
+            <input type="hidden" name="return_uri" value="<?php echo $_SERVER['REQUEST_URI']?>">
 
             <fieldset class="form-group">
                 <label class="caption" for="user_login">User ID</label>
