@@ -14,6 +14,7 @@ add_action( 'wp_enqueue_scripts', function() {
     wp_enqueue_style( 'layout',             $td . '/css/layout.css' );
     wp_enqueue_script( 'header',             $td . '/js/header.js', array('jquery') );
     wp_enqueue_script( 'theme',             $td . '/js/theme.js', array('jquery') );
+    wp_enqueue_script( 'cookie',            $td . '/js/js.cookie.min.js' );
 });
 
 

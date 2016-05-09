@@ -1,14 +1,13 @@
 body {
     min-height: 2048px;
 }
+
 header,
 footer,
 .layout-content-inner {
     max-width: 1248px;
     margin: 0 auto;
 }
-
-
 
 @media all and ( min-width: 640px ) {
     .xs {
