@@ -66,9 +66,10 @@
     display: none;
     position: fixed;
     z-index: 950;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+    /*left: 0;
+    right: 0;*/
+    /*margin: 0 auto;*/
+    width: 100%;
     padding-left: .8em;
     padding-right: .8em;
     max-width: 1248px;
