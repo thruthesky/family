@@ -1,3 +1,43 @@
+/** first-post */
+
+.first-post {
+    margin-bottom: 2em;
+}
+.first-post a {
+    color: black;
+    text-decoration: none;
+}
+.first-post a:hover {
+    text-decoration: none;
+}
+.first-post .photo {
+    margin-bottom: .4em;
+    height: 20em;
+    overflow: hidden;
+}
+.first-post .title {
+    margin-bottom: .4em;
+    padding-left: .6em;
+    font-size: 1.4em;
+    color: #0A246A;
+}
+.first-post .desc {
+    padding-left: .8em;
+    color: #697b84;
+}
+@media all and ( max-width: 640px ) {
+    .first-post .photo {
+        height: 8em;
+    }
+}
+.first-post img {
+    width: 100%;
+}
+
+/* .......................................................
+ * .first-page-post
+ * ....................................................... */
+
 .first-page-post {
     margin-bottom: 2em;
 }
@@ -36,5 +76,15 @@
 }
 .first-page-post-desc a {
     font-size: 1em;
-    color: #071634;
+    color: #697b84;
+}
+
+.first-page-post-info {
+}
+.first-page-post-info .date {
+    color: #0f75ac;
+}
+.first-page-post-info .author {
+    padding-left: 1em;
+    color: #0A246A;
 }
