@@ -29,7 +29,8 @@ ol, ul {
 .widget > ul li:before,
 .widget > ul li a:before,
 .widget > div > ul li a:before,
-.widget_calendar caption:before { font-family: FontAwesome; font-size: 12px; margin-right: 6px; color: #ccc; display: inline-block!important; width: 1em; text-align: center; }
+.widget_calendar caption:before {
+    font-family: serif; font-size: 12px; margin-right: 6px; color: #ccc; display: inline-block!important; width: 1em; text-align: center; }
 .widget > ul li a:hover:before { color: #999; }
 
 .widget_archive > ul > li a:before { content: "\f073"; }
