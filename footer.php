@@ -39,6 +39,7 @@
 <?php
 $html = ob_get_clean();
 
+
 // 여기서 어떤 페이지에 CSS/JS combine 을 적용할 지 결정한다.
 // K-Forum 을 이용하는 경우, 메인/글 목록/글읽기 만 적용한다.
 $route = null;
@@ -112,8 +113,11 @@ function getNewHTMLOnCSS( &$html ) {
 }
 function getNewHTMLOnJavascript( &$html ) {
     $js = null;
-    preg_match_all("/<script.*src=.*\/(wp\-includes|wp\-content)(.*.js).+>/", $html, $ms);
-    //preg_match_all("/<script.*src=.*\/(wp\-content)(.*.js).+>/", $html, $ms);
+	/** There are many external javascript originated from outside like jetpack, facebook api, google api etc.. */
+$host = $_SERVER['HTTP_HOST'];
+    preg_match_all("/<script.*src=.*$host.*\/(wp\-includes|wp\-content)(.*.js).+>/", $html, $ms);
+    // preg_match_all("/<script.*src=.*\/(wp\-includes|wp\-content)(.*.js).+>/", $html, $ms);
+    // preg_match_all("/<script.*src=.*\/(wp\-content)(.*.js).+>/", $html, $ms);
     if ( $ms[1] ) {
         $tags = $ms[0];
         $js = null;
