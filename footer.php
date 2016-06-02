@@ -113,8 +113,12 @@ function getNewHTMLOnCSS( &$html ) {
 }
 function getNewHTMLOnJavascript( &$html ) {
     $js = null;
-	/** There are many external javascript originated from outside like jetpack, facebook api, google api etc.. */
-$host = $_SERVER['HTTP_HOST'];
+	/**
+     * There are many external javascript originated from outside like jetpack, facebook api, google api etc..
+     *
+     * 그래서 host 를 비교해서 현재 사이트 내의 JS 만 컴파일 한다.
+     */
+    $host = $_SERVER['HTTP_HOST'];
     preg_match_all("/<script.*src=.*$host.*\/(wp\-includes|wp\-content)(.*.js).+>/", $html, $ms);
     // preg_match_all("/<script.*src=.*\/(wp\-includes|wp\-content)(.*.js).+>/", $html, $ms);
     // preg_match_all("/<script.*src=.*\/(wp\-content)(.*.js).+>/", $html, $ms);
