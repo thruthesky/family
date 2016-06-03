@@ -99,7 +99,8 @@ function cache_abs_dir() {
  */
 function getNewHTMLOnCSS( &$html ) {
     $css = null;
-    preg_match_all("/<link.*href=.*(\/wp\-)(.*\.css)[^>]+>/", $html, $ms);
+    $host = $_SERVER['HTTP_HOST'];
+    preg_match_all("/<link.*href=.*$host.*(\/wp\-)(.*\.css)[^>]+>/", $html, $ms);
     if ( $ms[2] ) {
         $styles = $ms[2];
         for( $i = 0; $i < count($styles); $i ++ ) {
