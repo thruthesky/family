@@ -45,8 +45,8 @@ add_action( 'wp_enqueue_scripts', function() {
 
 
 add_action('after_setup_theme', function () {
-	show_admin_bar(false);
-	//if ( ! current_user_can('manage_options') ) show_admin_bar(false);
+	//show_admin_bar(false);
+	if ( ! current_user_can('manage_options') ) show_admin_bar(false);
 });
 
 function register_my_menu() {
