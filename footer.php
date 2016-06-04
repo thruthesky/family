@@ -32,7 +32,10 @@
 </footer>
 
 <!-- JS Holder -->
+
 <?php wp_footer(); ?>
+
+
 </body>
 </html>
 
