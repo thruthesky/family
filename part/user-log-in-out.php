@@ -73,6 +73,9 @@
             <div class="line error" style="display:none;"></div>
 
             <input class="btn btn-primary" type="submit" value="Log In" tabindex="121">
+            <a class="btn btn-secondary" href="<?php echo esc_url( home_url() )?>/user-register">Register</a>
+
+
 
         </form>
     </section>
